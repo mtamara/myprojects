@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html" charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>My App - Homepage</title>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" media="all">
+		<link href="css/layout.css" rel="stylesheet" type="text/css" media="all">
+		<link href="css/tabs.css" rel="stylesheet" type="text/css" media="all">
+		<link href="css/accordions.css" rel="stylesheet" type="text/css" media="all">
+		<script src="js/jquery-3.1.1.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+			$(function() {
+					  $(".expand").on( "click", function() {
+						$expand = $(this).find(">:first-child");		
+						if($expand.text() == "+") {
+						  $expand.text("-");
+						} else {
+						  $expand.text("+");
+						}
+					  });
+			});
+		</script>
+	</head>
+	<body>
+		<div id="page">
+			<div id="header">
+				<a href="index.html" class="btn btn-logout" role="button"><span class="glyphicon glyphicon-log-out"></span></a>
+			</div>
+			<div id="search-div"></div>
+			<div id="title-content">
+				<h2 class="main-title"><a href="main_page.html" class="btn btn-default button-link" role="button"><span class="glyphicon glyphicon-chevron-left"></span></a> Tabs</h2>
+			</div>
+			<div id="main-content-tabs">
+				<div class="tab-content custom-tab-content">
+  					<div>
+					  <!-- Nav tabs -->
+					  <ul class="nav nav-tabs custom-tab" role="tablist">
+					    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab"><i class="glyphicon glyphicon-home icon"></i><span class="link-lable"> Home</span></a></li>
+					    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab"><i class="glyphicon glyphicon-envelope"></i><span class="link-lable"> Messages</span></a></li>
+					    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab"><i class="glyphicon glyphicon-cog"></i><span class="link-lable"> Settings</span></a></li>					
+					    <li role="presentation"><a href="#profile" aria-controls="test5" role="tab" data-toggle="tab"><i class="glyphicon glyphicon-user"></i><span class="link-lable"> Profile</span></a></li>
+					  </ul>
+
+					<div class="tab-content">
+					    <div role="tabpanel" class="tab-pane fade in active" id="home">
+					    	<br>
+							<div class="panel-group" id="accordion">
+								<div class="panel panel-default">
+									  <div class="panel-heading">
+										<h4 data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="panel-title expand">
+										   <div class="right-arrow pull-left">-</div>&nbsp;&nbsp;<a href="#">Accordion 1</a>
+										</h4>
+									  </div>
+									  <div id="collapse1" class="panel-collapse collapse in">
+										<div class="panel-body">
+											Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+											sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+											quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+											Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+											sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+											quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+											Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+											sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+											quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+										</div>
+									  </div>
+								</div>
+																
+								<div class="panel panel-default">
+									  <div class="panel-heading">
+										<h4 data-toggle="collapse" data-parent="#accordion" href="#collapse2" class="panel-title expand">
+											<div class="right-arrow pull-left">+</div>&nbsp;&nbsp;<a href="#">Accordion 2</a>
+										</h4>
+									  </div>
+									  <div id="collapse2" class="panel-collapse collapse">
+										<div class="panel-body">
+											Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+											sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+											quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+											Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+											sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+											quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+										</div>
+									  </div>
+								</div>
+						  </div> 
+						  <!--/panel-group-->
+						</div>
+						<div role="tabpanel" class="tab-pane fade" id="messages"><h3>Tab 2</h3>
+						 <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						</div>
+						 <div role="tabpanel" class="tab-pane fade" id="settings"><h3>Tab 3</h3>
+						 <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						</div>				  
+						 <div role="tabpanel" class="tab-pane fade" id="profile"><h3>Tab 4</h3>
+						 <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						</div>
+					</div>
+
+					</div>
+				</div>
+							
+			</div>
+			
+			<div id="footer"></div>
+		</div>
+	</body>
+</html>
